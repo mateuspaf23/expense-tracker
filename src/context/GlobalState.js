@@ -8,7 +8,7 @@ const initalState = {
     { id: 1, text: "Flowers", amount: -30 },
     { id: 2, text: "Salary", amount: 1100 },
     { id: 3, text: "Book", amount: -20 },
-    { id: 4, text: "Camera", amount: 300 },
+    { id: 4, text: "Camera", amount: -300 },
   ],
 };
 
