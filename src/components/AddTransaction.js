@@ -37,9 +37,7 @@ const AddTransaction = () => {
         </div>
 
         <div className="form-control">
-          <label htmlFor="Amount">
-            Amount <br /> (negative - expense, positive - income )
-          </label>
+          <label htmlFor="Amount">Amount (-) expense (+) income</label>
           <input
             type="number"
             placeholder="Enter amount..."
