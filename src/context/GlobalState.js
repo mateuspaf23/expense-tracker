@@ -27,6 +27,7 @@ export const GlobalProvider = ({ children }) => {
     getTransactions();
   }, []);
 
+  // Fetch transactions
   const fetchTransactions = async () => {
     const response = await fetch("http://localhost:4000/transactions");
     const data = await response.json();
@@ -34,15 +35,33 @@ export const GlobalProvider = ({ children }) => {
     return data;
   };
 
-  // Actions
-  const addTransaction = (transaction) => {
+  // Add transaction
+  const addTransaction = async (transaction) => {
+    if (transaction?.text === "" || transaction?.amount === 0) {
+      alert("There are info missing!");
+      return;
+    }
+
+    await fetch("http://localhost:4000/transactions", {
+      method: "POST",
+      headers: {
+        "Content-type": "Application/json",
+      },
+      body: JSON.stringify(transaction),
+    });
+
     dispatch({
       type: "ADD_TRANSACTION",
       payload: transaction,
     });
   };
 
-  const deleteTransaction = (id) => {
+  // Delete transaction
+  const deleteTransaction = async (id) => {
+    await fetch(`http://localhost:4000/transactions/${id}`, {
+      method: "DELETE",
+    });
+
     dispatch({
       type: "DELETE_TRANSACTION",
       payload: id,

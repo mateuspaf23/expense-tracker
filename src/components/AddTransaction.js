@@ -11,13 +11,15 @@ const AddTransaction = () => {
     e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random() * 100000),
       text,
       // Parsing amount to number
       amount: +amount,
     };
 
     addTransaction(newTransaction);
+
+    setText("");
+    setAmount(0);
   };
 
   return (

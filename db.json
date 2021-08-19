@@ -1,24 +1,19 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "text": "Flowers",
-      "amount": -30
-    },
-    {
-      "id": 2,
       "text": "Salary",
-      "amount": 1100
+      "amount": 1200,
+      "id": 1
     },
     {
-      "id": 3,
-      "text": "Book",
-      "amount": -20
+      "text": "Gym",
+      "amount": -148,
+      "id": 2
     },
     {
-      "id": 4,
-      "text": "Camera",
-      "amount": -300
+      "text": "Gasoline",
+      "amount": -100,
+      "id": 3
     }
   ]
 }
